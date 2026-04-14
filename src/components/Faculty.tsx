@@ -5,49 +5,43 @@ const facultyMembers = [
     name: "Henrique Gonzalez",
     title: "Engenheiro Ambiental (UFRJ)",
     image: "/faculty/henrique.png",
-    resume: "Experiência sólida na área ambiental, focado em geoprocessamento e soluções tecnológicas."
+    resume: "Sócio-fundador da Ambiental Pro, com atuação internacional e estudos na Austrália. Especialista em análise espacial de dados e monetização no setor ambiental."
   },
   {
-    name: "Raquel Carnivalle Melillo",
-    title: "Doutora em Ambiente e Sociedade (UNICAMP)",
+    name: "Dhyogo Miléo Taher",
+    title: "Doutor em Engenharia (UFPR)",
     image: "/faculty/raquel.png",
-    resume: "Pesquisadora com vasta contribuição para estudos de impacto ambiental e sustentabilidade."
+    resume: "Referência em tecnologias sustentáveis para remediação. Atua em projetos internacionais com foco em biorremediação, reaproveitamento de resíduos e bioenergia."
   },
   {
-    name: "Rodolfo Finatti",
-    title: "Geógrafo (UNESP), PhD em Geografia (USP)",
+    name: "Marcio Alberto",
+    title: "Fundador e CEO da Geoinovações®",
     image: "/faculty/rodolfo.png",
-    resume: "Especialista com profunda bagagem acadêmica e prática na formulação de mapas."
+    resume: "Especialista na gestão inteligente de áreas contaminadas e recursos hídricos. Integra geologia, qualidade da água e planejamento urbano na identificação de riscos ambientais."
   },
   {
-    name: "Vitor do Sacramento",
-    title: "Geólogo (UNB) com MBA",
+    name: "Gustavo Rosa",
+    title: "Engenheiro de Produção (UFF)",
     image: "/faculty/vitor.png",
-    resume: "Combina conhecimento profundo do solo com gestão estratégica em geotecnologias."
+    resume: "Possui 13 anos de experiência em projetos ambientais no Brasil e EUA. Atua com SIG, investigações ambientais, avaliação de risco, e planos de intervenção."
   },
   {
-    name: "Luís Antônio Soares",
-    title: "Engenheiro Agrimensor (UFU)",
+    name: "Bruno Damasio",
+    title: "Oceanógrafo e Mestre pela USP",
     image: "/faculty/luis.png",
-    resume: "Experiência de campo em demarcações e georreferenciamento de imóveis rurais."
+    resume: "Gerente Geral na Aquifero Serviços de Remediação. Lidera projetos no exterior com tecnologias como biorremediação, oxidação in situ e sistemas Pump & Treat."
   },
   {
-    name: "Ana Beatriz Ulhoa",
-    title: "Engenheira Ambiental",
+    name: "Bruno Bezerra",
+    title: "Engenheiro Ambiental e Especialista",
     image: "/faculty/ana.png",
-    resume: "Focada em análises geoespaciais voltadas para a sustentabilidade e impacto urbano."
+    resume: "Diretor da Bezerra Ambiental com mais de 10 anos de experiência em licenciamento. Seu foco é unir conhecimento técnico e prática para soluções ambientais inovadoras."
   },
   {
-    name: "Charlie Turette Lopes",
-    title: "Engenheiro de Produção",
+    name: "Matheus Bertolino",
+    title: "Doutorando em Engenharia (UFJF)",
     image: "/faculty/charlie.png",
-    resume: "Especialista em otimização de processos usando tecnologias de sensoriamento remoto."
-  },
-  {
-    name: "Bismarck Feuchard",
-    title: "Eng. Civil (INCRA)",
-    image: "/faculty/bismarck.png",
-    resume: "Expertise de ponta na legislação e requisitos técnicos do INCRA."
+    resume: "Foco em Tecnologias Ambientais. Atuou na Neoenergia e CESAMA, trazendo vasta experiência em tratamento de água, esgotamento rural e recuperação de áreas."
   }
 ];
 
@@ -78,7 +72,7 @@ export default function Faculty() {
                 <div className="absolute inset-0 bg-brand-gradient mix-blend-overlay z-10 opacity-0 group-hover:opacity-60 transition-opacity duration-300"></div>
                 <img 
                   src={member.image} 
-                  alt={`${member.name} – Professor da Pós-Graduação em Georreferenciamento, Geoprocessamento e Sensoriamento Remoto`} 
+                  alt={`${member.name} – Professor da Pós-Graduação em Gerenciamento e Remediação de Áreas Contaminadas`} 
                   className="w-full h-full object-cover grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
                 />
               </div>

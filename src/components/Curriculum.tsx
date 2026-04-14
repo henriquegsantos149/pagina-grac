@@ -4,48 +4,48 @@ import { useState } from 'react';
 
 const modules = [
   {
-    title: "Geotecnologias aplicadas à área ambiental",
-    description: "SIG, mapas temáticos, análise espacial e integração de dados."
+    title: "Introdução ao Gerenciamento de Áreas Contaminadas",
+    description: "Objetivo: Revisar os principais conceitos e enfatizar a integração entre investigação, avaliação de risco e remediação. Foco Prático: Aplicar os critérios em estudos de caso reais."
   },
   {
-    title: "Sensoriamento Remoto e PDI",
-    description: "Processamento Digital de Imagens, Satélites, drones, escaneamento a laser e mapeamento."
+    title: "Legislação e Licenciamento Ambiental",
+    description: "Objetivo: Compreensão de leis e regulamentações para conformidade legal em projetos ambientais. Foco Prático: Simulações de processos de licenciamento, análise de impactos e relatórios."
   },
   {
-    title: "Cartografia: Fundamentos, Técnicas e Ferramentas",
-    description: "Escalas, simbologia, normas técnicas e representação do relevo."
+    title: "Geologia e Hidrogeologia Aplicadas à Remediação",
+    description: "Objetivo: Conceitos básicos para identificação e caracterização de áreas contaminadas. Foco Prático: Ensaios hidrogeológicos para obtenção de dados ao planejamento de projetos."
   },
   {
-    title: "Referência Espacial e Geodésia",
-    description: "Sistemas de coordenadas, projeções cartográficas e operações."
+    title: "Geoprocessamento e Tratamento de Dados",
+    description: "Objetivo: Técnicas para manipulação e análise de dados espaciais em projetos. Foco Prático: Processamento de imagens de satélite, construção de mapas e análise espacial em vários contextos."
   },
   {
-    title: "Topografia aplicada ao georreferenciamento",
-    description: "GNSS, estação total, medições de campo, poligonais e nivelamento."
+    title: "Comportamento de Contaminantes",
+    description: "Objetivo: Abordar o comportamento de contaminantes no solo e na água subterrânea. Foco Prático: Aplicar os conceitos sobre transporte de poluentes na análise de soluções de remediação."
   },
   {
-    title: "Agrimensura legal",
-    description: "Legislação INCRA, exigências CONFEA/CREA, certificação e SIGEF."
+    title: "Geoprocessamento e Sensoriamento Remoto",
+    description: "Objetivo: Explorar técnicas aplicadas ao monitoramento de dados provenientes de satélites. Foco Prático: Levantar dados ambientais em mapas temáticos para identificar áreas e monitorar mudanças."
   },
   {
-    title: "Perícia Ambiental",
-    description: "Laudos técnicos, metodologias periciais, pareceres técnicos e resoluções."
+    title: "Tecnologias de Remediação Convencionais",
+    description: "Objetivo: Estudar tecnologias in situ e ex situ. Foco Prático: Comparar métodos in situ e ex situ e aplicar critérios de seleção em estudos de caso para implementação dessas tecnologias."
   },
   {
-    title: "Fundamentos de Programação para Dados Ambientais",
-    description: "Scripts, manipulação de dados espaciais e automação de mapas."
+    title: "Tecnologias de Remediação Não Convencionais",
+    description: "Objetivo: Explorar tecnologias não convencionais (oxidação, remediação termal, etc). Foco Prático: Avaliar e aplicar essas tecnologias em estudos de caso de projetos de complexidade e realistas."
   },
   {
-    title: "Gerenciamento de Bancos de Dados e Big Data",
-    description: "Modelagem, armazenamento e consulta de grandes volumes de dados (Big Data Ambiental)."
+    title: "Uso de Modelos Matemáticos para Projetos",
+    description: "Objetivo: Modelagem matemática com ênfase em GAC. Foco Prático: Aplicar modelos numéricos em fluxos de água e transporte de contaminantes para prever eficácia de técnicas de remediação."
   },
   {
-    title: "WebMaps e Dashboards",
-    description: "Visualizações interativas online, mapas digitais e tomada de decisão."
+    title: "Plano de Intervenção e Projetos de Remediação",
+    description: "Objetivo: Detalhar a elaboração de um projeto de intervenção baseado em GAC. Foco Prático: Aplicar princípios na execução de planos com controle de custos, prazos e comunicação com stakeholders."
   },
   {
-    title: "Gerenciamento Estratégico de Projetos",
-    description: "Planejamento, execução, coordenação técnica e avaliação de custos."
+    title: "Monitoramento e Encerramento da Remediação",
+    description: "Objetivo: Métodos e técnicas para monitoramento de eficácia e encerramento. Foco Prático: Uso de ferramentas de análise de dados para monitorar, avaliar a eficácia e adaptar as ações efetuadas."
   }
 ];
 

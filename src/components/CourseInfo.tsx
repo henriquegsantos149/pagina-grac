@@ -60,7 +60,7 @@ export default function CourseInfo() {
               <MonitorPlay className="w-7 h-7 text-[var(--color-brand-blue)]" />
             </div>
             <h3 className="text-lg font-semibold text-[var(--color-brand-light)] mb-2 font-primary uppercase">Modalidade</h3>
-            <p className="text-2xl font-impact tracking-wider text-brand-gradient leading-tight">100% EAD<br/><span className="text-sm font-secondary tracking-normal text-[var(--color-brand-light)]/60 uppercase">Aulas Gravadas</span></p>
+            <p className="text-2xl font-impact tracking-wider text-brand-gradient leading-tight">100% EAD<br/><span className="text-[12px] font-secondary tracking-normal text-[var(--color-brand-light)]/60 uppercase mt-1 block leading-snug">Aulas Gravadas<br/>Sem aulas presenciais</span></p>
           </motion.div>
 
           {/* Card 4 */}
@@ -89,8 +89,8 @@ export default function CourseInfo() {
             <Award className="w-10 h-10 text-[var(--color-brand-green2)]" />
           </div>
           <div className="relative z-10">
-            <h3 className="text-2xl font-bold mb-2 text-[var(--color-brand-light)] font-primary uppercase tracking-wide">Chancela Anhanguera</h3>
-            <p className="text-[var(--color-brand-light)]/70 text-lg">Mais de 25 anos de tradição em ensino superior, com mais de 360 cursos com conceito positivo no MEC. Um diploma de peso para sua carreira.</p>
+            <h3 className="text-2xl font-bold mb-2 text-[var(--color-brand-light)] font-primary uppercase tracking-wide">Homologação do MEC</h3>
+            <p className="text-[var(--color-brand-light)]/70 text-[15px] max-w-[600px] leading-relaxed">Pós-Graduação em conjunto com a Universidade Anhanguera. Há mais de 25 anos na educação, com presença em graduação e pós, 15 mil profissionais, +150 cursos estrelados no guia do estudante e +360 cursos com conceito positivo no MEC.</p>
           </div>
         </motion.div>
 

@@ -3,9 +3,9 @@ import { Verified, FileSignature, University, TrendingUp, Users, Briefcase } fro
 
 const differencials = [
   {
-    title: "Certificação CREA / CONFEA",
-    description: "Elaborada com base na Decisão Normativa 116. Atende 100% os requisitos da câmara.",
-    icon: FileSignature
+    title: "100% Casos Reais",
+    description: "Metodologia que une teoria avançada e prática direta de mercado em ambientes reais de áreas contaminadas.",
+    icon: TrendingUp
   },
   {
     title: "Diploma Reconhecido Mec",
@@ -13,23 +13,23 @@ const differencials = [
     icon: Verified
   },
   {
-    title: "Força da Marcar Anhanguera",
-    description: "A tradição de mais de 25 anos em ensino superior chancelando sua educação.",
+    title: "Chancela Anhanguera",
+    description: "A tradição de mais de 25 anos em ensino superior trazendo enorme peso e confiabilidade à sua educação.",
     icon: University
   },
   {
-    title: "Metodologia 100% Prática",
-    description: "Casos reais do mercado e a vivência que apenas profissionais atuantes sabem ensinar.",
-    icon: TrendingUp
+    title: "Tecnologias Inovadoras",
+    description: "Explore abordagens desde os métodos convencionais In Situ até inovações não convencionais emergentes.",
+    icon: FileSignature
   },
   {
     title: "Corpo Docente de Elite",
-    description: "Professores que unem alta qualificação acadêmica e imensa bagagem no mercado.",
+    description: "Professores que unem alta qualificação acadêmica (Mestres e Doutores) e imensa vivência no mercado.",
     icon: Users
   },
   {
-    title: "Extensão de Atribuição",
-    description: "Possibilidade de solicitação de extensão de atribuição de serviços de georreferenciamento no CREA.",
+    title: "Gestão De Ponta a Ponta",
+    description: "Perspectiva gerencial focada em avaliação de risco, plano de intervenção e monitoramento final.",
     icon: Briefcase
   }
 ];
