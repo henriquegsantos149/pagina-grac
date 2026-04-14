@@ -4,43 +4,43 @@ const facultyMembers = [
   {
     name: "Henrique Gonzalez",
     title: "Engenheiro Ambiental (UFRJ)",
-    image: "/faculty/henrique.png",
+    image: "/posgrac/faculty/henrique.png",
     resume: "Sócio-fundador da Ambiental Pro, com atuação internacional e estudos na Austrália. Especialista em análise espacial de dados e monetização no setor ambiental."
   },
   {
     name: "Dhyogo Miléo Taher",
     title: "Doutor em Engenharia (UFPR)",
-    image: "/faculty/dhyogo.png",
+    image: "/posgrac/faculty/dhyogo.png",
     resume: "Referência em tecnologias sustentáveis para remediação. Atua em projetos internacionais com foco em biorremediação, reaproveitamento de resíduos e bioenergia."
   },
   {
     name: "Marcio Alberto",
     title: "Fundador e CEO da Geoinovações®",
-    image: "/faculty/marcio.png",
+    image: "/posgrac/faculty/marcio.png",
     resume: "Especialista na gestão inteligente de áreas contaminadas e recursos hídricos. Integra geologia, qualidade da água e planejamento urbano na identificação de riscos ambientais."
   },
   {
     name: "Gustavo Rosa",
     title: "Engenheiro de Produção (UFF)",
-    image: "/faculty/gustavo.png",
+    image: "/posgrac/faculty/gustavo.png",
     resume: "Possui 13 anos de experiência em projetos ambientais no Brasil e EUA. Atua com SIG, investigações ambientais, avaliação de risco, e planos de intervenção."
   },
   {
     name: "Bruno Damasio",
     title: "Oceanógrafo e Mestre pela USP",
-    image: "/faculty/bruno_damasio.png",
+    image: "/posgrac/faculty/bruno_damasio.png",
     resume: "Gerente Geral na Aquifero Serviços de Remediação. Lidera projetos no exterior com tecnologias como biorremediação, oxidação in situ e sistemas Pump & Treat."
   },
   {
     name: "Bruno Bezerra",
     title: "Engenheiro Ambiental e Especialista",
-    image: "/faculty/bruno_bezerra.png",
+    image: "/posgrac/faculty/bruno_bezerra.png",
     resume: "Diretor da Bezerra Ambiental com mais de 10 anos de experiência em licenciamento. Seu foco é unir conhecimento técnico e prática para soluções ambientais inovadoras."
   },
   {
     name: "Matheus Bertolino",
     title: "Doutorando em Engenharia (UFJF)",
-    image: "/faculty/matheus.png",
+    image: "/posgrac/faculty/matheus.png",
     resume: "Foco em Tecnologias Ambientais. Atuou na Neoenergia e CESAMA, trazendo vasta experiência em tratamento de água, esgotamento rural e recuperação de áreas."
   }
 ];
