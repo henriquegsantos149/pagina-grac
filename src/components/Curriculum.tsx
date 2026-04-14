@@ -4,48 +4,44 @@ import { useState } from 'react';
 
 const modules = [
   {
-    title: "Introdução ao Gerenciamento de Áreas Contaminadas",
-    description: "Objetivo: Revisar os principais conceitos e enfatizar a integração entre investigação, avaliação de risco e remediação. Foco Prático: Aplicar os critérios em estudos de caso reais."
+    title: "Ambiental Trends: Análises de Futuring & Modelos de Negócios",
+    description: "Objetivo: Discutir tendências emergentes no setor ambiental, utilizando ferramentas de análise de futuro (futuring) e de modelagem de negócios. Foco Prático: Aplicação de métodos de prospecção para identificar oportunidades de inovação e estruturar modelos de negócio adaptados às mudanças do mercado ambiental."
   },
   {
-    title: "Legislação e Licenciamento Ambiental",
-    description: "Objetivo: Compreensão de leis e regulamentações para conformidade legal em projetos ambientais. Foco Prático: Simulações de processos de licenciamento, análise de impactos e relatórios."
+    title: "Fundamentos de Programação para Ciência de Dados Ambientais",
+    description: "Objetivo: Introduzir a lógica de programação e sua aplicação no tratamento e análise de dados ambientais. Foco Prático: Criação de scripts básicos que automatizem processos de manipulação e organização de dados, facilitando análises em diferentes contextos ambientais."
   },
   {
-    title: "Geologia e Hidrogeologia Aplicadas à Remediação",
-    description: "Objetivo: Conceitos básicos para identificação e caracterização de áreas contaminadas. Foco Prático: Ensaios hidrogeológicos para obtenção de dados ao planejamento de projetos."
+    title: "Inteligência Artificial e Aprendizado de Máquinas",
+    description: "Objetivo: Apresentar conceitos de inteligência artificial e machine learning voltados para análise e tomada de decisão em projetos ambientais. Foco Prático: Construção e aplicação de modelos de aprendizado de máquina para classificação, previsão e identificação de padrões ambientais."
   },
   {
-    title: "Geoprocessamento e Tratamento de Dados",
-    description: "Objetivo: Técnicas para manipulação e análise de dados espaciais em projetos. Foco Prático: Processamento de imagens de satélite, construção de mapas e análise espacial em vários contextos."
+    title: "Gerenciamento de Bancos de Dados e Big Data aplicado ao Setor Ambiental",
+    description: "Objetivo: Ensinar os fundamentos da organização e gestão de grandes bases de dados ambientais. Foco Prático: Estruturação de bancos de dados, realização de consultas e uso de ferramentas de big data para análise em larga escala no setor ambiental."
   },
   {
-    title: "Comportamento de Contaminantes",
-    description: "Objetivo: Abordar o comportamento de contaminantes no solo e na água subterrânea. Foco Prático: Aplicar os conceitos sobre transporte de poluentes na análise de soluções de remediação."
+    title: "Geotecnologias aplicadas à área ambiental",
+    description: "Objetivo: Explorar conceitos e aplicações de geoprocessamento e SIG no setor ambiental. Foco Prático: Produção de mapas digitais e execução de análises espaciais que auxiliam na gestão de recursos naturais e territoriais."
   },
   {
-    title: "Geoprocessamento e Sensoriamento Remoto",
-    description: "Objetivo: Explorar técnicas aplicadas ao monitoramento de dados provenientes de satélites. Foco Prático: Levantar dados ambientais em mapas temáticos para identificar áreas e monitorar mudanças."
+    title: "Sensoriamento Remoto e Processamento Digital de Imagens",
+    description: "Objetivo: Abordar os fundamentos do sensoriamento remoto e do processamento digital de imagens para o monitoramento ambiental. Foco Prático: Utilização de imagens orbitais e aéreas em análises ambientais, possibilitando identificação de mudanças e elaboração de produtos cartográficos."
   },
   {
-    title: "Tecnologias de Remediação Convencionais",
-    description: "Objetivo: Estudar tecnologias in situ e ex situ. Foco Prático: Comparar métodos in situ e ex situ e aplicar critérios de seleção em estudos de caso para implementação dessas tecnologias."
+    title: "Gestão de Risco e Sustentabilidade Corporativa",
+    description: "Objetivo: Desenvolver conhecimentos sobre metodologias de gestão de riscos e sua aplicação em contextos empresariais. Foco Prático: Elaboração de estratégias de mitigação e implementação de práticas de sustentabilidade em organizações e projetos ambientais."
   },
   {
-    title: "Tecnologias de Remediação Não Convencionais",
-    description: "Objetivo: Explorar tecnologias não convencionais (oxidação, remediação termal, etc). Foco Prático: Avaliar e aplicar essas tecnologias em estudos de caso de projetos de complexidade e realistas."
+    title: "Modelagem e Análise de Decisão em Contextos Ambientais",
+    description: "Objetivo: Ensinar técnicas de modelagem e de análise de decisão aplicadas a problemas complexos da área ambiental. Foco Prático: Uso de modelos preditivos e simulações para subsidiar decisões estratégicas em projetos e políticas ambientais."
   },
   {
-    title: "Uso de Modelos Matemáticos para Projetos",
-    description: "Objetivo: Modelagem matemática com ênfase em GAC. Foco Prático: Aplicar modelos numéricos em fluxos de água e transporte de contaminantes para prever eficácia de técnicas de remediação."
+    title: "WebMaps e Dashboards: Visualização Interativa de Dados",
+    description: "Objetivo: Capacitar na criação de produtos digitais interativos para comunicar informações ambientais de forma acessível e clara. Foco Prático: Desenvolvimento de mapas online e dashboards dinâmicos para apresentação de dados e resultados ambientais a gestores, clientes e órgãos públicos."
   },
   {
-    title: "Plano de Intervenção e Projetos de Remediação",
-    description: "Objetivo: Detalhar a elaboração de um projeto de intervenção baseado em GAC. Foco Prático: Aplicar princípios na execução de planos com controle de custos, prazos e comunicação com stakeholders."
-  },
-  {
-    title: "Monitoramento e Encerramento da Remediação",
-    description: "Objetivo: Métodos e técnicas para monitoramento de eficácia e encerramento. Foco Prático: Uso de ferramentas de análise de dados para monitorar, avaliar a eficácia e adaptar as ações efetuadas."
+    title: "Escritório de Projetos Ágil (Tailoring, Modelos, Métodos e Artefatos)",
+    description: "Objetivo: Estudar fundamentos de gestão ágil aplicados ao planejamento e execução de projetos no setor ambiental. Foco Prático: Organização de processos e adaptação de métodos ágeis para otimizar prazos, recursos e entregas em projetos de dados ambientais."
   }
 ];
 
@@ -63,7 +59,7 @@ export default function Curriculum() {
           <h2 className="text-4xl md:text-5xl font-bold mb-4 font-primary uppercase tracking-wide">
             Conteúdo <span className="inline-block bg-brand-gradient text-[var(--color-brand-dark)] px-3 py-1 mt-2 mb-1 shape-leaf transform -skew-x-6"><span className="inline-block transform skew-x-6">Programático</span></span>
           </h2>
-          <p className="text-[var(--color-brand-light)]/70 max-w-2xl mx-auto font-secondary">11 módulos desenhados para conectar a teoria à prática, com foco absoluto no que o mercado exige.</p>
+          <p className="text-[var(--color-brand-light)]/70 max-w-2xl mx-auto font-secondary">10 módulos desenhados para conectar a teoria à prática, com foco absoluto no que o mercado exige.</p>
         </div>
 
         <div className="space-y-4">

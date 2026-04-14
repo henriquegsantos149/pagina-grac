@@ -6,7 +6,7 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[var(--color-brand-dark)]">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-grid opacity-70"></div>
-      <div className="remediation-pulse opacity-50"></div>
+      <div className="data-node-network opacity-50"></div>
       
       {/* Overlay gradient for readability */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[var(--color-brand-dark)]/80 to-[var(--color-brand-dark)] opacity-100 pointer-events-none"></div>
@@ -22,12 +22,12 @@ export default function Hero() {
         >
           <div className="shape-leaf flex items-center gap-2 bg-white/5 border border-[var(--color-brand-light)]/20 px-5 py-2.5 text-sm font-medium text-[var(--color-brand-light)]">
             <GraduationCap className="w-4 h-4 text-[var(--color-brand-green1)]" />
-            <span>Homologado MEC (Nota 5)</span>
+            <span>Reconhecido pelo MEC</span>
           </div>
 
           <div className="shape-leaf flex items-center gap-2 bg-white/5 border border-white/20 px-5 py-2.5 text-sm font-medium text-[var(--color-brand-light)]">
             <Map className="w-4 h-4 text-[var(--color-brand-green2)]" />
-            <span>Anhanguera</span>
+            <span>Anhanguera / Ambiental PRO</span>
           </div>
         </motion.div>
 
@@ -38,11 +38,11 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-5xl md:text-7xl font-bold tracking-tight mb-6 max-w-5xl uppercase leading-tight font-primary"
         >
-          Pós-Graduação em <br className="hidden md:block" />
+          MBA em <br className="hidden md:block" />
           <span className="inline-block bg-brand-gradient text-[var(--color-brand-dark)] px-4 py-1 mt-2 mb-1 shape-leaf transform -skew-x-6">
-            <span className="inline-block skew-x-6">Gerenciamento e Remediação</span>
+            <span className="inline-block skew-x-6">Inteligência de Dados</span>
           </span> <br className="hidden md:block" />
-          de Áreas Contaminadas
+          Ambientais
         </motion.h1>
 
         {/* Subtitle */}
@@ -52,7 +52,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-lg md:text-xl text-[var(--color-brand-light)]/70 mb-10 max-w-3xl leading-relaxed font-secondary"
         >
-          Pós-Graduação focada em formar profissionais especializados na identificação, avaliação e remediação de áreas contaminadas, com base em normas técnicas, legislações ambientais vigentes e boas práticas de engenharia e geociências.
+          Pós-Graduação que desenvolve habilidades práticas, técnicas e gerenciais em tecnologias inovadoras na área ambiental, com uma abordagem abrangente e atualizada sobre gestão, análise e visualização de dados.
         </motion.p>
 
         {/* CTA Button */}
@@ -61,7 +61,7 @@ export default function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
-          <a href="#inscreva-se" aria-label="Inscreva-se agora na Pós-Graduação em Gerenciamento e Remediação de Áreas Contaminadas" className="shape-leaf group relative inline-flex items-center justify-center gap-3 px-10 py-5 bg-brand-gradient text-[var(--color-brand-dark)] font-bold text-lg overflow-hidden transition-transform hover:scale-105 active:scale-95 shadow-[0_0_20px_var(--color-brand-green2)]/30">
+          <a href="#inscreva-se" aria-label="Inscreva-se agora no MBA em Inteligência de Dados Ambientais" className="shape-leaf group relative inline-flex items-center justify-center gap-3 px-10 py-5 bg-brand-gradient text-[var(--color-brand-dark)] font-bold text-lg overflow-hidden transition-transform hover:scale-105 active:scale-95 shadow-[0_0_20px_var(--color-brand-green2)]/30">
             <span className="relative z-10 transition-colors uppercase tracking-wider font-primary">Inscreva-se Agora</span>
             <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out"></div>
           </a>

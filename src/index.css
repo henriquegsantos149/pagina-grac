@@ -79,23 +79,23 @@
   opacity: 0.3;
 }
 
-.remediation-pulse {
+.data-node-network {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100vw;
-  height: 100vw;
-  max-width: 900px;
-  max-height: 900px;
+  width: 150vw;
+  height: 150vw;
+  max-width: 1200px;
+  max-height: 1200px;
   transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(111, 176, 58, 0.15) 0%, rgba(49, 168, 168, 0.05) 50%, transparent 70%);
-  box-shadow: 0 0 100px 50px rgba(111, 176, 58, 0.05);
-  animation: bio-pulse 6s infinite alternate ease-in-out;
+  background-image: radial-gradient(circle at center, rgba(111, 176, 58, 0.2) 0%, transparent 60%),
+                    repeating-conic-gradient(from 0deg, transparent 0deg 10deg, rgba(49, 168, 168, 0.05) 10deg 20deg);
+  animation: data-spin 60s linear infinite;
   pointer-events: none;
+  opacity: 0.7;
 }
 
-@keyframes bio-pulse {
-  0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.4; }
-  100% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.9; }
+@keyframes data-spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
 }

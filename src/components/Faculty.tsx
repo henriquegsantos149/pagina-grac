@@ -4,44 +4,32 @@ const facultyMembers = [
   {
     name: "Henrique Gonzalez",
     title: "Engenheiro Ambiental (UFRJ)",
-    image: "/faculty/Henrique_Gonzalez.png",
-    resume: "Sócio-fundador da Ambiental Pro, com atuação internacional e estudos na Austrália. Especialista em análise espacial de dados e monetização no setor ambiental."
+    image: "./faculty/Henrique_Gonzalez.png",
+    resume: "Engenheiro Ambiental com estudos na University of Technology em Sydney, na Austrália e vivência em consultoria com análise espacial de dados e monetização a partir da produção de mapas."
   },
   {
-    name: "Dhyogo Miléo Taher",
-    title: "Doutor em Engenharia (UFPR)",
-    image: "/faculty/Dhyogo_Miléo.png",
-    resume: "Referência em tecnologias sustentáveis para remediação. Atua em projetos internacionais com foco em biorremediação, reaproveitamento de resíduos e bioenergia."
+    name: "Marlon Fernandes de Souza",
+    title: "Doutor em Eng. Agrícola (Unicamp)",
+    image: "./faculty/Dhyogo_Miléo.png",
+    resume: "Doutor em Engenharia Agrícola pela Faculdade de Engenharia Agrícola (FEAGRI) da Unicamp, na área de Gestão de Sistemas na Agricultura e Desenvolvimento Rural."
   },
   {
-    name: "Marcio Alberto",
-    title: "Fundador e CEO da Geoinovações®",
-    image: "/faculty/Marcio_Alberto.png",
-    resume: "Especialista na gestão inteligente de áreas contaminadas e recursos hídricos. Integra geologia, qualidade da água e planejamento urbano na identificação de riscos ambientais."
+    name: "Lucas Baldoni",
+    title: "Doutor em Análise Ambiental (Unicamp)",
+    image: "./faculty/Marcio_Alberto.png",
+    resume: "Mestre e Doutor em Análise Ambiental e Dinâmica Territorial pela UNICAMP. Realizou Pós-Doutorado em análises espaciais na USP."
   },
   {
-    name: "Gustavo Rosa",
-    title: "Engenheiro de Produção (UFF)",
-    image: "/faculty/Gustavo_Rosa.png",
-    resume: "Possui 13 anos de experiência em projetos ambientais no Brasil e EUA. Atua com SIG, investigações ambientais, avaliação de risco, e planos de intervenção."
+    name: "Vitor do Sacramento",
+    title: "Geólogo e Especialista (UNB)",
+    image: "./faculty/Gustavo_Rosa.png",
+    resume: "Geólogo (UNB) com MBA em Administração de Bancos de Dados."
   },
   {
-    name: "Bruno Damasio",
-    title: "Oceanógrafo e Mestre pela USP",
-    image: "/faculty/Bruno_Damasio.jpg",
-    resume: "Gerente Geral na Aquifero Serviços de Remediação. Lidera projetos no exterior com tecnologias como biorremediação, oxidação in situ e sistemas Pump & Treat."
-  },
-  {
-    name: "Bruno Bezerra",
-    title: "Engenheiro Ambiental e Especialista",
-    image: "/faculty/Bruno_Bezerra.jpg",
-    resume: "Diretor da Bezerra Ambiental com mais de 10 anos de experiência em licenciamento. Seu foco é unir conhecimento técnico e prática para soluções ambientais inovadoras."
-  },
-  {
-    name: "Matheus Bertolino",
-    title: "Doutorando em Engenharia (UFJF)",
-    image: "/faculty/Matheus_Bertolino.jpg",
-    resume: "Foco em Tecnologias Ambientais. Atuou na Neoenergia e CESAMA, trazendo vasta experiência em tratamento de água, esgotamento rural e recuperação de áreas."
+    name: "Vitor Amorim",
+    title: "Especialista em Sustentabilidade",
+    image: "./faculty/Bruno_Damasio.jpg",
+    resume: "Especialista em Sustentabilidade e Mudanças Climáticas na Neoenergia S.A., possui pós-graduação em Gestão Sustentável de Energia pela COPPE UFRJ/AHK."
   }
 ];
 
@@ -72,7 +60,7 @@ export default function Faculty() {
                 <div className="absolute inset-0 bg-brand-gradient mix-blend-overlay z-10 opacity-0 group-hover:opacity-60 transition-opacity duration-300"></div>
                 <img 
                   src={member.image} 
-                  alt={`${member.name} – Professor da Pós-Graduação em Gerenciamento e Remediação de Áreas Contaminadas`} 
+                  alt={`${member.name} – Professor do MBA em Inteligência de Dados Ambientais`} 
                   className="w-full h-full object-cover grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
                 />
               </div>
