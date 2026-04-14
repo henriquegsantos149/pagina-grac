@@ -61,7 +61,7 @@ export default function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
-          <a href="#inscreva-se" aria-label="Inscreva-se agora na Pós-Graduação em Gerenciamento e Remediação de Áreas Contaminadas" className="shape-leaf group relative inline-flex items-center justify-center gap-3 px-10 py-5 bg-brand-gradient text-[var(--color-brand-dark)] font-bold text-lg overflow-hidden transition-transform hover:scale-105 active:scale-95 shadow-[0_0_20px_var(--color-brand-green2)]/30">
+          <a href="https://pay.voompcreators.com.br/9385/offer/lMxSD0/?utm_source=site_anhanguera" target="_blank" rel="noopener noreferrer" aria-label="Inscreva-se agora na Pós-Graduação em Gerenciamento e Remediação de Áreas Contaminadas" className="shape-leaf group relative inline-flex items-center justify-center gap-3 px-10 py-5 bg-brand-gradient text-[var(--color-brand-dark)] font-bold text-lg overflow-hidden transition-transform hover:scale-105 active:scale-95 shadow-[0_0_20px_var(--color-brand-green2)]/30">
             <span className="relative z-10 transition-colors uppercase tracking-wider font-primary">Inscreva-se Agora</span>
             <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out"></div>
           </a>

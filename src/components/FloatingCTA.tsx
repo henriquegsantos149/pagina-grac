@@ -26,7 +26,7 @@ export default function FloatingCTA() {
       className="fixed bottom-6 right-6 z-50"
     >
       <a 
-        href="https://wa.link/qg00on" 
+        href="https://pay.voompcreators.com.br/9385/offer/lMxSD0/?utm_source=site_anhanguera" 
         target="_blank"
         rel="noopener noreferrer"
         className="shape-leaf group flex items-center justify-center gap-2 px-6 py-4 bg-brand-gradient text-[var(--color-brand-dark)] font-bold text-base shadow-[0_0_20px_rgba(149,166,23,0.4)] hover:scale-105 active:scale-95 transition-transform"

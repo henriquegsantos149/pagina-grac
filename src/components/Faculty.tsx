@@ -52,7 +52,7 @@ export default function Faculty() {
         
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 font-primary uppercase tracking-wide">
-            Corpo <span className="inline-block bg-brand-gradient text-[var(--color-brand-dark)] px-3 py-1 mt-2 mb-1 shape-leaf transform -skew-x-6"><span className="inline-block transform skew-x-6">Docente</span></span>
+            Conheça alguns de nossos <span className="inline-block bg-brand-gradient text-[var(--color-brand-dark)] px-3 py-1 mt-2 mb-1 shape-leaf transform -skew-x-6"><span className="inline-block transform skew-x-6">Professores</span></span>
           </h2>
           <p className="text-[var(--color-brand-light)]/70 max-w-2xl mx-auto">Aprenda com especialistas de mercado e acadêmicos renomados nas melhores instituições do país.</p>
         </div>

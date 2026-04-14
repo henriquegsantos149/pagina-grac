@@ -33,11 +33,11 @@ export default function CallToAction() {
           
           <div className="relative z-10 space-y-4 sm:space-y-0 sm:flex sm:justify-center sm:gap-6">
             <a 
-              href="https://wa.me/5500000000000?text=Olá!%20Tenho%20interesse%20no%20MBA%20em%20Inteligência%20de%20Dados%20Ambientais." 
+              href="https://pay.voompcreators.com.br/9385/offer/lMxSD0/?utm_source=site_anhanguera" 
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Inscreva-se agora no MBA em Inteligência de Dados Ambientais via WhatsApp"
-              className="shape-leaf group relative inline-flex items-center justify-center gap-3 px-10 py-5 bg-brand-gradient text-[var(--color-brand-dark)] font-bold text-lg overflow-hidden transition-transform hover:scale-105 active:scale-95 w-full sm:w-auto shadow-[0_0_30px_rgba(111,176,58,0.4)]"
+              aria-label="Inscreva-se agora na Pós-Graduação em Gerenciamento e Remediação de Áreas Contaminadas"
+              className="shape-leaf group relative inline-flex items-center justify-center gap-3 px-10 py-5 bg-brand-gradient text-[var(--color-brand-dark)] font-bold text-lg overflow-hidden transition-transform hover:scale-105 active:scale-95 w-full sm:w-auto shadow-[0_0_30px_rgba(149,166,23,0.4)]"
             >
               <span className="relative z-10 flex items-center gap-2 uppercase tracking-wide font-primary">
                 Inscreva-se Agora
@@ -47,13 +47,13 @@ export default function CallToAction() {
             </a>
             
             <a 
-              href="./ementa-mba-ida.pdf" 
+              href="https://wa.link/go7va9" 
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Baixar a ementa completa do MBA em Inteligência de Dados Ambientais em PDF"
+              aria-label="Falar com um consultor da Pós-Graduação em Gerenciamento e Remediação de Áreas Contaminadas"
               className="shape-leaf-inverse inline-flex items-center justify-center gap-2 px-10 py-5 bg-transparent border border-white/20 text-[var(--color-brand-light)] font-bold text-lg transition-all hover:bg-white/5 hover:border-[var(--color-brand-light)] w-full sm:w-auto uppercase tracking-wide font-primary"
             >
-              Baixar Ementa Completa
+              Falar com um Consultor
             </a>
           </div>
 
