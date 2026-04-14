@@ -1,8 +1,6 @@
 {
-  "rewrites": [
-    {
-      "source": "/posgrac/(.*)",
-      "destination": "/posgrac/index.html"
-    }
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/posgrac/(.*)", "dest": "/posgrac/index.html" }
   ]
 }
