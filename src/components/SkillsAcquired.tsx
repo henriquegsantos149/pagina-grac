@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Microscope, Map, Workflow, ShieldCheck, Microscope as Lab, SearchCheck, Layers } from 'lucide-react';
+import { Workflow, ShieldCheck, Map, SearchCheck, Layers, FlaskConical } from 'lucide-react';
 
 const skills = [
   {
@@ -30,7 +30,7 @@ const skills = [
   {
     title: "Monitoramento Estratégico",
     description: "Desenvolvimento de planos de monitoramento pós-remediação focados na obtenção do Termo de Reabilitação para Uso Declarado.",
-    icon: Lab
+    icon: FlaskConical
   }
 ];
 
