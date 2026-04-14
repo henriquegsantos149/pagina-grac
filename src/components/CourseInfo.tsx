@@ -16,7 +16,7 @@ export default function CourseInfo() {
   };
 
   return (
-    <section className="relative py-24 bg-black/40 border-y border-white/5">
+    <section id="sobre" className="relative py-24 bg-black/40 border-y border-white/5">
       <div className="max-w-7xl mx-auto px-6">
         
         <div className="text-center mb-16">
@@ -50,7 +50,7 @@ export default function CourseInfo() {
               <BookOpen className="w-7 h-7 text-[var(--color-brand-green2)]" />
             </div>
             <h3 className="text-lg font-semibold text-[var(--color-brand-light)] mb-2 font-primary uppercase">Carga Horária</h3>
-            <p className="text-4xl font-impact tracking-wider text-brand-gradient">400h</p>
+            <p className="text-4xl font-impact tracking-wider text-brand-gradient">440h</p>
           </motion.div>
 
           {/* Card 3 */}
@@ -89,8 +89,8 @@ export default function CourseInfo() {
             <Award className="w-10 h-10 text-[var(--color-brand-green2)]" />
           </div>
           <div className="relative z-10">
-            <h3 className="text-2xl font-bold mb-2 text-[var(--color-brand-light)] font-primary uppercase tracking-wide">Homologação do MEC</h3>
-            <p className="text-[var(--color-brand-light)]/70 text-[15px] max-w-[600px] leading-relaxed">MBA em conjunto com a Universidade Anhanguera. Há mais de 25 anos a Anhanguera faz parte do futuro de diversos estudantes, com cursos de graduação, pós-graduação e de extensão, em diversas áreas do conhecimento. São cerca de 15 mil profissionais e professores, 25 anos de tradição em ensino superior, +150 cursos estrelados no guia do estudante e +360 cursos conceito positivo no MEC.</p>
+            <h3 className="text-2xl font-bold mb-2 text-[var(--color-brand-light)] font-primary uppercase tracking-wide">Certificação Nacional</h3>
+            <p className="text-[var(--color-brand-light)]/70 text-[15px] max-w-[600px] leading-relaxed">Pós-Graduação 100% EAD com diploma reconhecido pelo MEC e chancela Ambiental Pro. Uma formação de excelência projetada para levar sua carreira ao próximo nível de autoridade e conhecimento técnico.</p>
           </div>
         </motion.div>
 

@@ -13,8 +13,8 @@ const differencials = [
     icon: Verified
   },
   {
-    title: "Chancela Anhanguera",
-    description: "A tradição de mais de 25 anos em ensino superior trazendo enorme peso e confiabilidade à sua educação.",
+    title: "Chancela Ambiental Pro",
+    description: "Formação técnica de elite com a expertise de quem atua diariamente nos maiores projetos de remediação do país.",
     icon: University
   },
   {
