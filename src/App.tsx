@@ -17,13 +17,13 @@ function App() {
     <main className="w-full min-h-screen bg-[var(--color-brand-dark)] text-[var(--color-brand-light)] font-secondary selection:bg-[var(--color-brand-primary)] selection:text-[var(--color-brand-dark)] relative">
       <Header />
       <Hero />
-      <CourseInfo />
       <ProblemObjective />
       <Curriculum />
       <SkillsResults />
       <PracticalApplications />
       <TargetAudience />
       <Faculty />
+      <CourseInfo />
       <Testimonials />
       <FAQ />
       <CallToAction />
