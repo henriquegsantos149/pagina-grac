@@ -1,27 +1,42 @@
+import { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
-import { Quote, Star } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const testimonials = [
-  {
-    name: "Ricardo Silva",
-    role: "Engenheiro Ambiental Sênior",
-    text: "A Pós GRAC foi um divisor de águas na minha carreira. A abordagem prática sobre modelagem conceitual e as tecnologias de remediação In Situ me deram a segurança que eu precisava para liderar projetos complexos em grandes indústrias.",
-    rating: 5
-  },
-  {
-    name: "Beatriz Helena",
-    role: "Geóloga de Projetos",
-    text: "Excelente conteúdo sobre hidrogeologia aplicada e avaliação de risco. O corpo docente realmente vive o mercado, o que faz toda a diferença na hora de discutir casos reais e estratégias de compliance ambiental.",
-    rating: 5
-  },
-  {
-    name: "André Cavalcante",
-    role: "Consultor Ambiental",
-    text: "Finalmente uma pós que foca no que realmente importa no GAC. O módulo de legislação e o foco em tecnologias inovadoras me ajudaram a reduzir custos de remediação para meus clientes em quase 30%."
-  }
+  { id: 1, src: 'testimonial-1.png' },
+  { id: 2, src: 'testimonial-2.jpg' },
+  { id: 3, src: 'testimonial-3.png' },
+  { id: 4, src: 'testimonial-4.png' },
 ];
 
 export default function Testimonials() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextSlide = useCallback(() => {
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+  }, []);
+
+  const prevSlide = useCallback(() => {
+    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  }, []);
+
+  const handleDragEnd = (_: any, info: any) => {
+    if (info.offset.x > 50) {
+      prevSlide();
+    } else if (info.offset.x < -50) {
+      nextSlide();
+    }
+  };
+
+  // Helper to calculate shortest distance in the loop
+  const getRelativePosition = (itemIndex: number) => {
+    let diff = itemIndex - currentIndex;
+    const len = testimonials.length;
+    if (diff > len / 2) diff -= len;
+    if (diff < -len / 2) diff += len;
+    return diff;
+  };
+
   return (
     <section id="depoimentos" className="py-16 md:py-24 bg-black/40 relative border-t border-white/5 overflow-hidden">
       
@@ -37,40 +52,72 @@ export default function Testimonials() {
           <p className="text-[var(--color-brand-light)]/70 max-w-2xl mx-auto font-secondary font-medium uppercase tracking-widest text-xs">Experiência Real • Resultados de Elite</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.15 }}
-              className="shape-leaf bg-white/[0.03] backdrop-blur-sm p-8 border border-white/10 relative flex flex-col justify-between hover:border-[var(--color-brand-primary)]/30 transition-all shadow-lg shadow-black/40 group overflow-hidden"
-            >
-              <div className="absolute top-0 right-0 w-24 h-24 bg-brand-gradient opacity-[0.03] rounded-full blur-[40px] group-hover:opacity-10 transition-opacity"></div>
-              <Quote className="absolute top-6 right-6 w-10 h-10 text-[var(--color-brand-light)]/5 group-hover:text-[var(--color-brand-primary)]/10 transition-colors" />
-              
-              <div className="mb-6 relative z-10">
-                <div className="flex items-center gap-1 mb-4">
-                  {[...Array(5)].map((_, j) => (
-                    <Star key={j} className="w-4 h-4 fill-[var(--color-brand-primary)] text-[var(--color-brand-primary)]" />
-                  ))}
-                </div>
-                <p className="font-secondary text-[var(--color-brand-light)]/80 leading-relaxed italic relative z-10 group-hover:text-[var(--color-brand-light)] transition-colors">
-                  "{testimonial.text}"
-                </p>
-              </div>
+        <div className="relative flex flex-col items-center min-h-[450px] md:min-h-[600px] justify-center">
+          {/* Navigation Arrows */}
+          <button 
+            onClick={prevSlide}
+            className="absolute left-0 z-40 p-3 rounded-full bg-white/5 border border-white/10 text-[var(--color-brand-light)] hover:bg-brand-gradient hover:text-[var(--color-brand-dark)] transition-all hidden lg:block"
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+          
+          <button 
+            onClick={nextSlide}
+            className="absolute right-0 z-40 p-3 rounded-full bg-white/5 border border-white/10 text-[var(--color-brand-light)] hover:bg-brand-gradient hover:text-[var(--color-brand-dark)] transition-all hidden lg:block"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
 
-              <div className="flex items-center gap-4 mt-auto pt-6 border-t border-white/10 relative z-10">
-                <div className="w-12 h-12 bg-white/5 shape-leaf flex justify-center items-center font-bold text-lg font-primary uppercase text-[var(--color-brand-light)]/50 group-hover:bg-brand-gradient group-hover:text-[var(--color-brand-dark)] transition-all">
-                  {testimonial.name.charAt(0)}
-                </div>
-                <div>
-                  <h4 className="font-bold text-[var(--color-brand-light)] font-primary uppercase group-hover:text-[var(--color-brand-secondary)] transition-colors">{testimonial.name}</h4>
-                  <p className="text-xs text-[var(--color-brand-light)]/50 font-secondary uppercase tracking-wider">{testimonial.role}</p>
-                </div>
-              </div>
-            </motion.div>
+          <div className="relative w-full h-full flex items-center justify-center py-10 overflow-visible">
+            {testimonials.map((testimonial, i) => {
+              const relativePos = getRelativePosition(i);
+              const isActive = relativePos === 0;
+              const isVisible = Math.abs(relativePos) <= 1; // Show neighbors
+
+              return (
+                <motion.div
+                  key={testimonial.id}
+                  initial={false}
+                  animate={{
+                    x: relativePos * 280, // Small distance
+                    scale: isActive ? 1 : 0.82,
+                    opacity: isVisible ? (isActive ? 1 : 0.4) : 0, // Fade out non-neighbors
+                    filter: isActive ? 'blur(0px)' : 'blur(6px)',
+                    zIndex: isActive ? 30 : 20 - Math.abs(relativePos),
+                    pointerEvents: isActive ? 'auto' : 'none',
+                  }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 260,
+                    damping: 25,
+                    mass: 0.8,
+                  }}
+                  drag={isActive ? "x" : false}
+                  dragConstraints={{ left: 0, right: 0 }}
+                  onDragEnd={handleDragEnd}
+                  className="absolute w-[300px] md:w-[500px] cursor-pointer"
+                >
+                  <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.6)] bg-black">
+                    <img 
+                      src={`${import.meta.env.BASE_URL}testimonials/${testimonial.src}`}
+                      alt={`Depoimento ${testimonial.id}`}
+                      className="w-full h-auto object-contain block select-none pointer-events-none"
+                    />
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Indicators */}
+        <div className="flex justify-center gap-3 mt-12">
+          {testimonials.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrentIndex(i)}
+              className={`h-1.5 transition-all duration-300 rounded-full ${currentIndex === i ? 'w-8 bg-brand-gradient' : 'w-2 bg-white/10 hover:bg-white/20'}`}
+            />
           ))}
         </div>
 
