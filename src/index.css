@@ -7,6 +7,11 @@
   --color-brand-green2: #818C2A;
   --color-brand-blue: #F0F2AE;
   
+  /* Aliases for ALPA compatibility */
+  --color-brand-primary: var(--color-brand-green1);
+  --color-brand-secondary: var(--color-brand-green2);
+  --color-brand-accent: var(--color-brand-blue);
+  
   --font-primary: 'Outfit', sans-serif;
   --font-secondary: 'Montserrat', sans-serif;
   --font-impact: 'Bebas Neue', sans-serif;
@@ -54,28 +59,5 @@
   inset: 0;
 }
 
-/* Glowing grid accents */
-.bg-grid::before {
-  content: '';
-  position: absolute;
-  left: 30%;
-  top: 0;
-  width: 1px;
-  height: 100%;
-  background: linear-gradient(to bottom, transparent, var(--color-brand-green1), transparent);
-  box-shadow: 0 0 15px 3px var(--color-brand-green1);
-  opacity: 0.3;
-}
 
-.bg-grid::after {
-  content: '';
-  position: absolute;
-  top: 40%;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background: linear-gradient(to right, transparent, var(--color-brand-blue), transparent);
-  box-shadow: 0 0 15px 3px var(--color-brand-blue);
-  opacity: 0.3;
-}
 

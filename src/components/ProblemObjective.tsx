@@ -1,60 +1,86 @@
 import { motion } from 'framer-motion';
-import { Target, AlertTriangle } from 'lucide-react';
+import { Target, AlertTriangle, ShieldCheck } from 'lucide-react';
 
 export default function ProblemObjective() {
   return (
-    <section className="py-24 relative bg-black/40 border-t border-white/5">
-      <div className="max-w-7xl mx-auto px-6">
-        
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 font-primary uppercase tracking-wide">
-            O Desafio da <span className="text-brand-gradient">Remediação de Precisão</span>
-          </h2>
-          <p className="text-[var(--color-brand-light)]/70 max-w-2xl mx-auto font-secondary">Dominar o gerenciamento de áreas contaminadas exige técnica, segurança jurídica e visão estratégica.</p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Card: O Problema */}
-          <motion.div 
+    <section id="problema" className="py-16 md:py-24 relative overflow-hidden bg-black/40 border-t border-white/5">
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          
+          {/* Left Side: Problem Text */}
+          <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="shape-leaf bg-[var(--color-brand-dark)] border border-white/10 p-10 hover:border-red-500/30 transition-colors relative overflow-hidden group"
           >
-            <div className="absolute top-0 right-0 w-32 h-32 bg-red-500/5 rounded-full blur-[40px] group-hover:bg-red-500/10 transition-colors"></div>
-            <div className="flex items-center gap-4 mb-6 relative z-10">
-              <div className="w-14 h-14 bg-red-500/10 flex items-center justify-center shape-leaf text-red-400">
-                <AlertTriangle className="w-7 h-7" />
-              </div>
-              <h3 className="text-2xl font-bold font-primary uppercase">O Cenário Atual</h3>
+            <div className="flex items-center gap-3 text-[var(--color-brand-primary)] mb-6 font-primary uppercase tracking-[0.2em] font-bold text-sm">
+              <AlertTriangle className="w-5 h-5" />
+              <span>O Desafio da Remediação de Precisão</span>
             </div>
-            <p className="text-[var(--color-brand-light)]/70 leading-relaxed font-secondary relative z-10">
-              A presença de <strong>passivos ambientais</strong> é um dos maiores entraves para o desenvolvimento imobiliário e industrial. O setor enfrenta <strong>legislações cada vez mais rígidas</strong> (CONAMA, CETESB) e processos de investigação complexos. Sem o conhecimento técnico de ponta, consultores e gestores perdem tempo e recursos com <strong>remediações ineficazes</strong>, atrasos em licenciamentos e riscos de multas astronômicas.
-            </p>
+            <h2 className="text-3xl md:text-5xl font-bold mb-8 font-primary uppercase leading-tight">
+              Do Passivo Ambiental <br className="hidden lg:block"/> à <span className="text-brand-gradient">Área Recuperada</span>
+            </h2>
+            <div className="space-y-6 text-lg text-[var(--color-brand-light)]/70 font-secondary">
+              <p>
+                A presença de passivos ambientais é um dos maiores entraves para o desenvolvimento imobiliário e industrial. O setor enfrenta legislações cada vez mais rígidas (CONAMA, CETESB) e processos de investigação complexos.
+              </p>
+              <p>
+                Sem o conhecimento técnico de ponta, consultores e gestores perdem tempo e recursos com remediações ineficazes, atrasos em licenciamentos e riscos de multas astronômicas.
+              </p>
+            </div>
           </motion.div>
 
-          {/* Card: O Objetivo */}
-          <motion.div 
+          {/* Right Side: Objective Card */}
+          <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="shape-leaf bg-[var(--color-brand-dark)] border border-[var(--color-brand-green2)]/30 p-10 hover:shadow-[0_0_30px_rgba(149,166,23,0.15)] transition-all relative overflow-hidden group"
+            className="shape-leaf bg-white/[0.03] backdrop-blur-sm border border-white/20 p-10 relative overflow-hidden shadow-lg shadow-black/40 group"
           >
-            <div className="absolute top-0 left-0 w-32 h-32 bg-[var(--color-brand-green2)]/10 rounded-full blur-[40px] group-hover:bg-[var(--color-brand-green2)]/20 transition-colors"></div>
-            <div className="flex items-center gap-4 mb-6 relative z-10">
-              <div className="w-14 h-14 bg-brand-gradient flex items-center justify-center shape-leaf text-[var(--color-brand-dark)]">
-                <Target className="w-7 h-7" />
+            <div className="absolute top-0 right-0 w-40 h-40 bg-brand-gradient opacity-[0.05] rounded-full blur-[60px] group-hover:opacity-[0.1] transition-opacity"></div>
+            
+            <div className="flex items-center gap-4 mb-8 relative z-10">
+              <div className="w-12 h-12 shape-leaf bg-brand-gradient flex items-center justify-center text-[var(--color-brand-dark)] shadow-[0_0_15px_rgba(149,166,23,0.3)]">
+                <Target className="w-6 h-6" />
               </div>
-              <h3 className="text-2xl font-bold font-primary uppercase">Nosso Objetivo</h3>
+              <h3 className="text-2xl font-bold font-primary uppercase tracking-wide text-[var(--color-brand-light)]">Nosso Objetivo</h3>
             </div>
-            <p className="text-[var(--color-brand-light)]/70 leading-relaxed font-secondary relative z-10">
-              Formar profissionais de elite capazes de conduzir o <strong>Gerenciamento de Áreas Contaminadas (GAC)</strong> de ponta a ponta. Nossa missão é ensinar as <strong>tecnologias de remediação mais avançadas</strong> do mercado, aliadas à modelagem conceitual precisa e interpretação de dados geológicos. Ao final desta Pós, você será autoridade em transformar passivos ambientais em <strong>áreas recuperadas e prontas para o uso</strong>, com total segurança técnica.
-            </p>
-          </motion.div>
-        </div>
 
+            <div className="space-y-8 relative z-10">
+              <div className="flex items-start gap-4">
+                <div className="mt-1 w-2 h-2 rounded-full bg-[var(--color-brand-primary)] shrink-0 shadow-[0_0_10px_var(--color-brand-primary)]"></div>
+                <div>
+                  <h4 className="font-bold text-[var(--color-brand-light)] mb-1 uppercase tracking-wider text-sm">Gestão Integral</h4>
+                  <p className="text-[var(--color-brand-light)]/60 text-sm leading-relaxed">Formar profissionais de elite para conduzir o Gerenciamento de Áreas Contaminadas (GAC) de ponta a ponta com total segurança.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-4">
+                <div className="mt-1 w-2 h-2 rounded-full bg-[var(--color-brand-secondary)] shrink-0 shadow-[0_0_10px_var(--color-brand-secondary)]"></div>
+                <div>
+                  <h4 className="font-bold text-[var(--color-brand-light)] mb-1 uppercase tracking-wider text-sm">Tecnologias Avançadas</h4>
+                  <p className="text-[var(--color-brand-light)]/60 text-sm leading-relaxed">Capacitar na elaboração de modelos conceituais precisos e na aplicação das melhores e mais modernas tecnologias de remediação.</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="mt-1 w-2 h-2 rounded-full bg-[var(--color-brand-accent)] shrink-0 shadow-[0_0_10px_var(--color-brand-accent)]"></div>
+                <div>
+                  <h4 className="font-bold text-[var(--color-brand-light)] mb-1 uppercase tracking-wider text-sm">Segurança Jurídica</h4>
+                  <p className="text-[var(--color-brand-light)]/60 text-sm leading-relaxed">Garantir que você tenha autoridade operacional para transformar antigos passivos ambientais em áreas prontas para o novo uso.</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-10 pt-8 border-t border-white/10 flex items-center gap-3 text-[var(--color-brand-accent)] font-bold italic relative z-10">
+              <ShieldCheck className="w-5 h-5" />
+              <span className="text-sm tracking-wide">Remediação definitiva com segurança técnica total.</span>
+            </div>
+          </motion.div>
+
+        </div>
       </div>
     </section>
   );

@@ -12,13 +12,13 @@ const profiles = [
 
 export default function TargetAudience() {
   return (
-    <section id="publico-alvo" className="py-24 bg-[var(--color-brand-dark)] relative border-t border-white/5">
+    <section id="publico-alvo" className="py-16 md:py-24 bg-[var(--color-brand-dark)] relative border-t border-white/5">
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-gradient opacity-[0.02] blur-[100px] rounded-full pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10 flex flex-col lg:flex-row gap-16 items-center">
         
         <div className="lg:w-1/2">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 font-primary uppercase tracking-wide">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 font-primary uppercase tracking-wide">
             Para <span className="text-brand-gradient">Quem é</span> o Curso?
           </h2>
           <p className="text-[var(--color-brand-light)]/70 text-lg font-secondary mb-10 leading-relaxed">
@@ -33,9 +33,9 @@ export default function TargetAudience() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.1 }}
-                className="flex items-center gap-4 bg-white/5 border border-white/5 p-4 shape-leaf hover:bg-white/10 transition-colors"
+                className="flex items-center gap-4 bg-white/[0.03] backdrop-blur-sm border border-white/10 p-4 shape-leaf hover:bg-white/10 transition-colors shadow-lg shadow-black/40"
               >
-                <UserCheck className="w-6 h-6 text-[var(--color-brand-green2)] shrink-0" />
+                <UserCheck className="w-6 h-6 text-[var(--color-brand-secondary)] shrink-0" />
                 <span className="font-secondary text-[var(--color-brand-light)]">{profile}</span>
               </motion.div>
             ))}
@@ -48,7 +48,7 @@ export default function TargetAudience() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="shape-leaf bg-black/40 border border-[var(--color-brand-green1)]/20 p-10 relative overflow-hidden backdrop-blur-sm"
+            className="shape-leaf bg-black/40 border border-[var(--color-brand-primary)]/20 p-10 relative overflow-hidden backdrop-blur-md shadow-2xl shadow-black/60"
           >
             <div className="absolute top-0 left-0 w-full h-1 bg-brand-gradient"></div>
             
@@ -59,16 +59,16 @@ export default function TargetAudience() {
 
             <ul className="space-y-5">
               <li className="flex items-start gap-4">
-                <CheckCircle2 className="w-6 h-6 text-[var(--color-brand-green1)] shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-6 h-6 text-[var(--color-brand-primary)] shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="font-bold text-[var(--color-brand-light)] font-primary text-xl uppercase">Ensino Superior Completo</h4>
+                  <h4 className="font-bold text-[var(--color-brand-light)] font-primary text-xl uppercase tracking-wide">Ensino Superior Completo</h4>
                   <p className="text-sm text-[var(--color-brand-light)]/60 font-secondary mt-1">É obrigatória a apresentação do diploma de graduação (bacharelado ou tecnólogo) reconhecido pelo MEC para a emissão do certificado de especialista.</p>
                 </div>
               </li>
               <li className="flex items-start gap-4">
-                <CheckCircle2 className="w-6 h-6 text-[var(--color-brand-green1)] shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-6 h-6 text-[var(--color-brand-primary)] shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="font-bold text-[var(--color-brand-light)] font-primary text-xl uppercase">Perfil Profissional</h4>
+                  <h4 className="font-bold text-[var(--color-brand-light)] font-primary text-xl uppercase tracking-wide">Perfil Profissional</h4>
                   <p className="text-sm text-[var(--color-brand-light)]/60 font-secondary mt-1">Indicado para profissionais que já atuam ou desejam ingressar no mercado de consultoria ambiental, licenciamento ou remediação industrial.</p>
                 </div>
               </li>

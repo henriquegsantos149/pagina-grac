@@ -29,11 +29,11 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="py-24 bg-[var(--color-brand-dark)] relative border-t border-white/5">
+    <section id="faq" className="py-16 md:py-24 bg-[var(--color-brand-dark)] relative border-t border-white/5">
       <div className="max-w-4xl mx-auto px-6 relative z-10">
         
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 font-primary uppercase tracking-wide">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 font-primary uppercase tracking-wide">
             Perguntas <span className="text-brand-gradient">Frequentes</span>
           </h2>
           <p className="text-[var(--color-brand-light)]/70 max-w-2xl mx-auto font-secondary">Tire suas dúvidas finais sobre a certificação e as aulas da Pós GRAC.</p>
@@ -50,18 +50,18 @@ export default function FAQ() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
-                className={`shape-leaf bg-black/30 border transition-all duration-300 ${isOpen ? 'border-[var(--color-brand-green2)]/40 shadow-[0_0_15px_rgba(149,166,23,0.1)]' : 'border-white/5 hover:border-[var(--color-brand-green2)]/30'}`}
+                className={`shape-leaf bg-white/[0.03] backdrop-blur-sm border transition-all duration-300 ${isOpen ? 'border-[var(--color-brand-primary)] shadow-[0_0_20px_rgba(149,166,23,0.1)]' : 'border-white/5 hover:border-[var(--color-brand-accent)]/30 shadow-lg shadow-black/40'}`}
               >
                 <button 
                   onClick={() => setOpenIndex(isOpen ? null : index)}
                   className="w-full px-6 py-5 flex items-center justify-between text-left group gap-4"
                 >
-                  <h3 className={`text-lg font-bold font-primary tracking-wide transition-colors duration-300 uppercase ${isOpen ? 'text-[var(--color-brand-green2)]' : 'text-[var(--color-brand-light)] group-hover:text-white'}`}>
+                  <h3 className={`text-lg font-bold font-primary tracking-wide transition-colors duration-300 uppercase ${isOpen ? 'text-[var(--color-brand-secondary)]' : 'text-[var(--color-brand-light)] group-hover:text-white'}`}>
                     {faq.question}
                   </h3>
-                  <div className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-colors duration-300 ${isOpen ? 'bg-[var(--color-brand-green2)]/20' : 'bg-white/5 group-hover:bg-white/10'}`}>
+                  <div className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-colors duration-300 ${isOpen ? 'bg-[var(--color-brand-primary)]/20' : 'bg-white/5 group-hover:bg-white/10'}`}>
                     {isOpen ? (
-                      <Minus className="w-5 h-5 text-[var(--color-brand-green2)]" />
+                      <Minus className="w-5 h-5 text-[var(--color-brand-primary)]" />
                     ) : (
                       <Plus className="w-5 h-5 text-[var(--color-brand-light)]/70" />
                     )}
