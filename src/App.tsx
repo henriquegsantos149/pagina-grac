@@ -27,15 +27,15 @@ function App() {
     <main className="w-full min-h-screen bg-[var(--color-brand-dark)] text-[var(--color-brand-light)] font-secondary selection:bg-[var(--color-brand-primary)] selection:text-[var(--color-brand-dark)] relative">
       <Header />
       <Hero onOpenModal={handleOpenModal} />
-      <ProblemObjective id="objetivo" />
-      <Curriculum id="conteudo" />
-      <SkillsResults id="beneficios" />
-      <PracticalApplications id="pratica" />
-      <TargetAudience id="publico" />
-      <Faculty id="corpo-docente" />
-      <CourseInfo id="sobre" />
-      <Testimonials id="depoimentos" />
-      <FAQ id="duvidas" />
+      <ProblemObjective />
+      <Curriculum />
+      <SkillsResults />
+      <PracticalApplications />
+      <TargetAudience />
+      <Faculty />
+      <CourseInfo />
+      <Testimonials />
+      <FAQ />
       <CallToAction onOpenModal={handleOpenModal} />
       
       <StickyCTA onOpenModal={handleOpenModal} />
