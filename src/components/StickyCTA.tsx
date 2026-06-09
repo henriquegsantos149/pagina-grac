@@ -1,4 +1,5 @@
-import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle } from 'lucide-react';
 
 interface StickyCTAProps {
@@ -7,29 +8,51 @@ interface StickyCTAProps {
 
 export default function StickyCTA({ onOpenModal }: StickyCTAProps) {
   const checkoutUrl = "https://pay.voompcreators.com.br/13469";
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Show CTA only when scrolled past 80% of viewport height (past Hero)
+      if (window.scrollY > window.innerHeight * 0.8) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check immediately on mount
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3 pointer-events-none">
-      <motion.button
-        onClick={() => onOpenModal(checkoutUrl)}
-        initial={{ scale: 0, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        className="pointer-events-auto cursor-pointer flex items-center gap-3 bg-brand-gradient text-[var(--color-brand-dark)] px-4 py-3 md:px-6 md:py-4 shape-leaf shadow-[0_10px_30px_rgba(149,166,23,0.4)] group relative overflow-hidden"
-      >
-        <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-        
-        <div className="relative z-10 flex items-center gap-2 md:gap-3">
-          <MessageCircle className="w-5 h-5 md:w-6 md:h-6 animate-pulse" />
-          <span className="font-primary font-extrabold uppercase tracking-wider text-base md:text-lg">
-            Matricule-se Agora
-          </span>
-        </div>
+      <AnimatePresence>
+        {isVisible && (
+          <motion.button
+            onClick={() => onOpenModal(checkoutUrl)}
+            initial={{ scale: 0, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0, opacity: 0 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="pointer-events-auto cursor-pointer flex items-center gap-3 bg-brand-gradient text-[var(--color-brand-dark)] px-4 py-3 md:px-6 md:py-4 shape-leaf shadow-[0_10px_30px_rgba(149,166,23,0.4)] group relative overflow-hidden"
+          >
+            <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+            
+            <div className="relative z-10 flex items-center gap-2 md:gap-3">
+              <MessageCircle className="w-5 h-5 md:w-6 md:h-6 animate-pulse" />
+              <span className="font-primary font-extrabold uppercase tracking-wider text-base md:text-lg">
+                Matricule-se Agora
+              </span>
+            </div>
 
-        {/* Outer pulse effect */}
-        <div className="absolute inset-0 rounded-full bg-brand-gradient opacity-20 animate-ping -z-10 scale-150"></div>
-      </motion.button>
+            {/* Outer pulse effect */}
+            <div className="absolute inset-0 rounded-full bg-brand-gradient opacity-20 animate-ping -z-10 scale-150"></div>
+          </motion.button>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
