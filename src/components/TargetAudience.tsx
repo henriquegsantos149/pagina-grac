@@ -12,7 +12,7 @@ const profiles = [
 
 export default function TargetAudience() {
   return (
-    <section id="publico-alvo" className="py-16 md:py-24 bg-[var(--color-brand-dark)] relative border-t border-white/5">
+    <section id="publico-alvo" className="py-16 md:py-24 bg-[var(--color-brand-light)] text-[var(--color-brand-dark)] relative">
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-gradient opacity-[0.02] blur-[100px] rounded-full pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10 flex flex-col lg:flex-row gap-16 items-center">
@@ -21,7 +21,7 @@ export default function TargetAudience() {
           <h2 className="text-3xl md:text-5xl font-bold mb-6 font-primary uppercase tracking-wide">
             Para <span className="text-brand-gradient">Quem é</span> o Curso?
           </h2>
-          <p className="text-[var(--color-brand-light)]/70 text-lg font-secondary mb-10 leading-relaxed">
+          <p className="text-[var(--color-brand-dark)]/70 text-lg font-secondary mb-10 leading-relaxed">
             Esta pós-graduação foi desenhada para quem busca aprofundamento técnico em uma das áreas mais rentáveis e complexas da engenharia ambiental: o gerenciamento de passivos e remediação de áreas contaminadas.
           </p>
 
@@ -33,7 +33,7 @@ export default function TargetAudience() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.1 }}
-                className="flex items-center gap-4 bg-white/[0.03] backdrop-blur-sm border border-white/10 p-4 shape-leaf hover:bg-white/10 transition-colors shadow-lg shadow-black/40"
+                className="flex items-center gap-4 bg-[var(--color-brand-dark)] border border-white/10 p-4 shape-leaf hover:border-[var(--color-brand-primary)]/50 transition-colors shadow-lg shadow-black/40"
               >
                 <UserCheck className="w-6 h-6 text-[var(--color-brand-secondary)] shrink-0" />
                 <span className="font-secondary text-[var(--color-brand-light)]">{profile}</span>
@@ -48,7 +48,7 @@ export default function TargetAudience() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="shape-leaf bg-black/40 border border-[var(--color-brand-primary)]/20 p-10 relative overflow-hidden backdrop-blur-md shadow-2xl shadow-black/60"
+            className="shape-leaf bg-[var(--color-brand-dark)] text-[var(--color-brand-light)] border border-[var(--color-brand-primary)]/20 p-10 relative overflow-hidden backdrop-blur-md shadow-2xl shadow-black/60"
           >
             <div className="absolute top-0 left-0 w-full h-1 bg-brand-gradient"></div>
             

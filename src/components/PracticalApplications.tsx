@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import appPublicosImg from '../assets/applications/app_publicos.webp';
 
 const applications = [
   {
@@ -19,14 +20,16 @@ const applications = [
   {
     title: "Órgãos Públicos e Fiscalização",
     description: "Atuar na análise e validação de processos em órgãos ambientais (CETESB, INEA, FEPAM), garantindo que as diretrizes normativas sejam cumpridas com rigor técnico e isenção.",
-    image: `${import.meta.env.BASE_URL}applications/app_publicos.png?v=1`
+    image: appPublicosImg
   }
 ];
 
 export default function PracticalApplications() {
   return (
-    <section id="aplicacoes-praticas" className="py-16 md:py-24 relative bg-black/40 border-t border-white/5">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="aplicacoes-praticas" className="py-16 md:py-24 relative bg-[var(--color-brand-dark)] border-t border-white/5 overflow-hidden">
+      {/* Subtle radial glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(240,242,174,0.1)_0%,transparent_60%)] pointer-events-none"></div>
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-4 font-primary uppercase tracking-wide">
@@ -49,6 +52,7 @@ export default function PracticalApplications() {
                 <img 
                   src={app.image} 
                   alt={app.title} 
+                  loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100" 
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>

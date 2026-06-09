@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import logo from '../assets/logo.webp';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,8 +19,9 @@ export default function Header() {
             className="cursor-pointer"
           >
             <img 
-              src={`${import.meta.env.BASE_URL}logo.png`} 
+              src={logo} 
               alt="Pós GRAC Logo" 
+              fetchPriority="high"
               className="h-14 md:h-20 w-auto object-contain py-1 drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]"
             />
           </a>

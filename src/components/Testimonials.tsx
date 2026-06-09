@@ -1,12 +1,16 @@
 import { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import testimonial1 from '../assets/testimonials/testimonial-1.webp';
+import testimonial2 from '../assets/testimonials/testimonial-2.webp';
+import testimonial3 from '../assets/testimonials/testimonial-3.webp';
+import testimonial4 from '../assets/testimonials/testimonial-4.webp';
 
 const testimonials = [
-  { id: 1, src: 'testimonial-1.png' },
-  { id: 2, src: 'testimonial-2.jpg' },
-  { id: 3, src: 'testimonial-3.png' },
-  { id: 4, src: 'testimonial-4.png' },
+  { id: 1, src: testimonial1 },
+  { id: 2, src: testimonial2 },
+  { id: 3, src: testimonial3 },
+  { id: 4, src: testimonial4 },
 ];
 
 export default function Testimonials() {
@@ -38,10 +42,11 @@ export default function Testimonials() {
   };
 
   return (
-    <section id="depoimentos" className="py-16 md:py-24 bg-black/40 relative border-t border-white/5 overflow-hidden">
+    <section id="depoimentos" className="py-16 md:py-24 bg-[var(--color-brand-dark)] relative border-t border-white/5 overflow-hidden">
       
       {/* Background decoration */}
-      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-64 h-64 bg-[var(--color-brand-primary)]/5 rounded-full blur-[80px] pointer-events-none"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(149,166,23,0.12)_0%,transparent_60%)] pointer-events-none"></div>
+      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-64 h-64 bg-[var(--color-brand-primary)]/10 rounded-full blur-[80px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         
@@ -99,8 +104,9 @@ export default function Testimonials() {
                 >
                   <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.6)] bg-black">
                     <img 
-                      src={`${import.meta.env.BASE_URL}testimonials/${testimonial.src}`}
+                      src={testimonial.src}
                       alt={`Depoimento ${testimonial.id}`}
+                      loading="lazy"
                       className="w-full h-auto object-contain block select-none pointer-events-none"
                     />
                   </div>

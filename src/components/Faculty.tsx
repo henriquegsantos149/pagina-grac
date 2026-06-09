@@ -1,56 +1,63 @@
 import { motion } from 'framer-motion';
-
-const base = import.meta.env.BASE_URL;
+import henriqueImg from '../assets/faculty/henrique.webp';
+import dhyogoImg from '../assets/faculty/dhyogo.webp';
+import marcioImg from '../assets/faculty/marcio.webp';
+import gustavoImg from '../assets/faculty/gustavo.webp';
+import brunoDamasioImg from '../assets/faculty/bruno_damasio.webp';
+import brunoBezerraImg from '../assets/faculty/bruno_bezerra.webp';
+import matheusImg from '../assets/faculty/matheus.webp';
 
 const facultyMembers = [
   {
     name: "Henrique Gonzalez",
     title: "Engenheiro Ambiental (UFRJ)",
-    image: `${base}faculty/henrique.png`,
+    image: henriqueImg,
     resume: "Sócio-fundador da Ambiental Pro, com atuação internacional e estudos na Austrália. Especialista em análise espacial de dados e monetização no setor ambiental."
   },
   {
     name: "Dhyogo Miléo Taher",
     title: "Doutor em Engenharia (UFPR)",
-    image: `${base}faculty/dhyogo.png`,
+    image: dhyogoImg,
     resume: "Referência em tecnologias sustentáveis para remediação. Atua em projetos internacionais com foco em biorremediação, reaproveitamento de resíduos e bioenergia."
   },
   {
     name: "Marcio Alberto",
     title: "Fundador e CEO da Geoinovações®",
-    image: `${base}faculty/marcio.png`,
+    image: marcioImg,
     resume: "Especialista na gestão inteligente de áreas contaminadas e recursos hídricos. Integra geologia, qualidade da água e planejamento urbano na identificação de riscos ambientais."
   },
   {
     name: "Gustavo Rosa",
     title: "Engenheiro de Produção (UFF)",
-    image: `${base}faculty/gustavo.png`,
+    image: gustavoImg,
     resume: "Possui 13 anos de experiência em projetos ambientais no Brasil e EUA. Atua com SIG, investigações ambientais, avaliação de risco, e planos de intervenção."
   },
   {
     name: "Bruno Damasio",
     title: "Oceanógrafo e Mestre pela USP",
-    image: `${base}faculty/bruno_damasio.png`,
+    image: brunoDamasioImg,
     resume: "Gerente Geral na Aquifero Serviços de Remediação. Lidera projetos no exterior com tecnologias como biorremediação, oxidação in situ e sistemas Pump & Treat."
   },
   {
     name: "Bruno Bezerra",
     title: "Engenheiro Ambiental e Especialista",
-    image: `${base}faculty/bruno_bezerra.png`,
+    image: brunoBezerraImg,
     resume: "Diretor da Bezerra Ambiental com mais de 10 anos de experiência em licenciamento. Seu foco é unir conhecimento técnico e prática para soluções ambientais inovadoras."
   },
   {
     name: "Matheus Bertolino",
     title: "Doutorando em Engenharia (UFJF)",
-    image: `${base}faculty/matheus.png`,
+    image: matheusImg,
     resume: "Foco em Tecnologias Ambientais. Atuou na Neoenergia e CESAMA, trazendo vasta experiência em tratamento de água, esgotamento rural e recuperação de áreas."
   }
 ];
 
 export default function Faculty() {
   return (
-    <section id="professores" className="py-16 md:py-24 bg-[var(--color-brand-dark)]">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="professores" className="py-16 md:py-24 bg-[var(--color-brand-dark)] relative overflow-hidden">
+      {/* Subtle radial glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(149,166,23,0.12)_0%,transparent_70%)] pointer-events-none"></div>
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-4 font-primary uppercase tracking-wide">
@@ -73,6 +80,7 @@ export default function Faculty() {
                 <img 
                   src={member.image} 
                   alt={`${member.name} – Professor da Pós-Graduação`} 
+                  loading="lazy"
                   className="w-full h-full object-cover grayscale-0 md:grayscale opacity-100 md:opacity-90 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
                 />
               </div>

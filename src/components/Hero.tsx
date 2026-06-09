@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
+import logoAmbientalPro from '../assets/logo-ambientalpro.webp';
+import mecBadge from '../assets/mec-badge.webp';
 
 interface HeroProps {
   onOpenModal: (url: string) => void;
@@ -33,8 +35,9 @@ export default function Hero({ onOpenModal }: HeroProps) {
             className="group"
           >
             <img 
-              src={`${import.meta.env.BASE_URL}logo-ambientalpro.png`} 
+              src={logoAmbientalPro} 
               alt="Ambiental Pro" 
+              fetchPriority="high"
               className="h-14 md:h-16 w-auto object-contain group-hover:scale-105 transition-transform"
             />
           </a>
@@ -47,8 +50,9 @@ export default function Hero({ onOpenModal }: HeroProps) {
             className="group"
           >
             <img 
-              src={`${import.meta.env.BASE_URL}mec-badge.png`} 
+              src={mecBadge} 
               alt="Selo MEC" 
+              fetchPriority="high"
               className="h-20 md:h-24 w-auto object-contain group-hover:scale-105 transition-transform"
             />
           </a>

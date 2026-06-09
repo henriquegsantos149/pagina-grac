@@ -3,7 +3,7 @@ import { Target, AlertTriangle, ShieldCheck } from 'lucide-react';
 
 export default function ProblemObjective() {
   return (
-    <section id="problema" className="py-16 md:py-24 relative overflow-hidden bg-black/40 border-t border-white/5">
+    <section id="problema" className="py-16 md:py-24 relative overflow-hidden bg-[var(--color-brand-light)] text-[var(--color-brand-dark)]">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
@@ -21,7 +21,7 @@ export default function ProblemObjective() {
             <h2 className="text-3xl md:text-5xl font-bold mb-8 font-primary uppercase leading-tight">
               Do Passivo Ambiental <br className="hidden lg:block"/> à <span className="text-brand-gradient">Área Recuperada</span>
             </h2>
-            <div className="space-y-6 text-lg text-[var(--color-brand-light)]/70 font-secondary">
+            <div className="space-y-6 text-lg text-[var(--color-brand-dark)]/70 font-secondary">
               <p>
                 A presença de passivos ambientais é um dos maiores entraves para o desenvolvimento imobiliário e industrial. O setor enfrenta legislações cada vez mais rígidas (CONAMA, CETESB) e processos de investigação complexos.
               </p>
@@ -37,7 +37,7 @@ export default function ProblemObjective() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="shape-leaf bg-white/[0.03] backdrop-blur-sm border border-white/20 p-10 relative overflow-hidden shadow-lg shadow-black/40 group"
+            className="shape-leaf bg-[var(--color-brand-dark)] border border-white/10 p-10 relative overflow-hidden shadow-2xl shadow-black/40 group"
           >
             <div className="absolute top-0 right-0 w-40 h-40 bg-brand-gradient opacity-[0.05] rounded-full blur-[60px] group-hover:opacity-[0.1] transition-opacity"></div>
             

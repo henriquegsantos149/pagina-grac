@@ -67,6 +67,9 @@ export default function Curriculum() {
       {/* background grid again for continuity */}
       <div className="absolute inset-0 bg-grid opacity-[0.05]"></div>
       
+      {/* Subtle radial glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(149,166,23,0.12)_0%,transparent_60%)] pointer-events-none"></div>
+      
       <div className="max-w-4xl mx-auto px-6 relative z-10">
         
         <div className="text-center mb-16">
