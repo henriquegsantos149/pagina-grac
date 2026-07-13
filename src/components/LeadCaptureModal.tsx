@@ -141,9 +141,9 @@ export default function LeadCaptureModal({ isOpen, onClose, checkoutUrl }: LeadC
                       type="tel"
                       id="telefone"
                       value={formData.telefone}
-                      onChange={(e) => setFormData({ ...formData, telefone: e.target.value })}
+                      onChange={(e) => setFormData({ ...formData, telefone: e.target.value.replace(/\D/g, '').slice(0, 11) })}
                       className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[var(--color-brand-primary)] transition-colors font-secondary"
-                      placeholder="(00) 00000-0000"
+                      placeholder="11999999999"
                     />
                   </div>
                 </div>
