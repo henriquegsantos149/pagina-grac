@@ -49,6 +49,9 @@ function App() {
       />
       
       <footer className="bg-black/80 border-t border-white/5 py-12 text-center text-[var(--color-brand-light)]/40 text-sm">
+        <div className="flex justify-center mb-6">
+          <img src="/logo-ambientalpro.webp" alt="Ambiental Pro" className="h-10 w-auto opacity-50 hover:opacity-100 transition-opacity" />
+        </div>
         <p className="font-secondary tracking-widest uppercase mb-2">© {new Date().getFullYear()} Pós-Graduação Ambiental Pro. Todos os direitos reservados.</p>
         <p className="text-[10px] opacity-30 uppercase tracking-[0.2em]">Excelência em Gerenciamento e Remediação de Áreas Contaminadas</p>
       </footer>
