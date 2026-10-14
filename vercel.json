@@ -26,10 +26,49 @@
           "value": "public, max-age=86400, must-revalidate"
         }
       ]
+    },
+    {
+      "source": "/(posgrac/)?bruno/?",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/html; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/(posgrac/)?dhyogo/?",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/html; charset=utf-8"
+        }
+      ]
     }
   ],
   "routes": [
-    { "handle": "filesystem" },
-    { "src": "/posgrac/(.*)", "dest": "/posgrac/index.html" }
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/posgrac/dhyogo/?",
+      "dest": "/dhyogo/index.html"
+    },
+    {
+      "src": "/dhyogo/?",
+      "dest": "/dhyogo/index.html"
+    },
+    {
+      "src": "/posgrac/bruno/?",
+      "dest": "/bruno/index.html"
+    },
+    {
+      "src": "/bruno/?",
+      "dest": "/bruno/index.html"
+    },
+    {
+      "src": "/posgrac/(.*)",
+      "dest": "/posgrac/index.html"
+    }
   ]
 }

@@ -20,7 +20,7 @@ function App() {
   const [checkoutUrl, setCheckoutUrl] = useState('');
 
   const handleOpenModal = (url: string) => {
-    setCheckoutUrl(url);
+    setCheckoutUrl(document.body.dataset.checkoutUrl || url);
     setIsModalOpen(true);
   };
 
