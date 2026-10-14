@@ -26,49 +26,44 @@
           "value": "public, max-age=86400, must-revalidate"
         }
       ]
-    },
-    {
-      "source": "/(posgrac/)?bruno/?",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "text/html; charset=utf-8"
-        }
-      ]
-    },
-    {
-      "source": "/(posgrac/)?dhyogo/?",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "text/html; charset=utf-8"
-        }
-      ]
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "handle": "filesystem"
+      "source": "/posgrac/bruno",
+      "destination": "/bruno/index.html"
     },
     {
-      "src": "/posgrac/dhyogo/?",
-      "dest": "/dhyogo/index.html"
+      "source": "/posgrac/bruno/",
+      "destination": "/bruno/index.html"
     },
     {
-      "src": "/dhyogo/?",
-      "dest": "/dhyogo/index.html"
+      "source": "/posgrac/dhyogo",
+      "destination": "/dhyogo/index.html"
     },
     {
-      "src": "/posgrac/bruno/?",
-      "dest": "/bruno/index.html"
+      "source": "/posgrac/dhyogo/",
+      "destination": "/dhyogo/index.html"
     },
     {
-      "src": "/bruno/?",
-      "dest": "/bruno/index.html"
+      "source": "/bruno",
+      "destination": "/bruno/index.html"
     },
     {
-      "src": "/posgrac/(.*)",
-      "dest": "/posgrac/index.html"
+      "source": "/dhyogo",
+      "destination": "/dhyogo/index.html"
+    },
+    {
+      "source": "/posgrac",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/posgrac/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/posgrac/:path*",
+      "destination": "/:path*"
     }
   ]
 }
